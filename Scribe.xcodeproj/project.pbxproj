@@ -24,6 +24,7 @@
 		4BAB12011FBA47B1000C9AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BAB12031FBA47B1000C9AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BAB120C1FBA4CB0000C9AA6 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		4BDA91EF1FBA5F240079D3A4 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		4BAB11F61FBA47B1000C9AA6 /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				4BDA91EE1FBA5F130079D3A4 /* Resources */,
 				4BAB120B1FBA4C0F000C9AA6 /* Model */,
 				4BAB120A1FBA4C0A000C9AA6 /* View */,
 				4BAB12091FBA4BF6000C9AA6 /* Controller */,
@@ -89,6 +91,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4BDA91EE1FBA5F130079D3A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BDA91EF1FBA5F240079D3A4 /* test.m4a */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
