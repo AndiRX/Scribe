@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yk2-cx-LvJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCRIBE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-Yg-Poh">
+                                        <rect key="frame" x="150.5" y="14" width="74" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sP3-Yg-Poh" firstAttribute="centerX" secondItem="yk2-cx-LvJ" secondAttribute="centerX" id="3cf-PO-cCu"/>
+                                    <constraint firstItem="sP3-Yg-Poh" firstAttribute="centerY" secondItem="yk2-cx-LvJ" secondAttribute="centerY" id="7pe-1W-Pcm"/>
+                                    <constraint firstAttribute="height" constant="55" id="csM-5l-4Dq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVf-9f-E7f" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="567" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Mh1-2n-gRT"/>
+                                    <constraint firstAttribute="width" constant="60" id="kox-QF-z5x"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKH-SN-ujY">
+                                <rect key="frame" x="104.5" y="635.5" width="165" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to transcribe the audio embedded in this app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1MR-Nw-myW">
+                                <rect key="frame" x="16" y="75" width="343" height="472"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MOk-Fr-K7d">
+                                <rect key="frame" x="157.5" y="567.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Syc-KA-Ied"/>
+                                    <constraint firstAttribute="height" constant="60" id="ob8-VS-Us9"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MOk-Fr-K7d" firstAttribute="centerX" secondItem="YVf-9f-E7f" secondAttribute="centerX" id="7IC-PI-lv1"/>
+                            <constraint firstItem="1MR-Nw-myW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ICJ-Dk-syc"/>
+                            <constraint firstItem="MOk-Fr-K7d" firstAttribute="centerY" secondItem="YVf-9f-E7f" secondAttribute="centerY" id="Mu3-3X-Y0g"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JKH-SN-ujY" secondAttribute="bottom" constant="8" id="NuX-FD-dhH"/>
+                            <constraint firstItem="yk2-cx-LvJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PlV-4M-VF0"/>
+                            <constraint firstItem="1MR-Nw-myW" firstAttribute="top" secondItem="yk2-cx-LvJ" secondAttribute="bottom" constant="20" id="Zy0-Ej-JWW"/>
+                            <constraint firstItem="JKH-SN-ujY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dAn-A5-wId"/>
+                            <constraint firstItem="1MR-Nw-myW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="glO-eH-OFa"/>
+                            <constraint firstItem="YVf-9f-E7f" firstAttribute="top" secondItem="1MR-Nw-myW" secondAttribute="bottom" constant="20" id="keo-zQ-h2n"/>
+                            <constraint firstItem="YVf-9f-E7f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sK6-K7-lXE"/>
+                            <constraint firstItem="JKH-SN-ujY" firstAttribute="top" secondItem="YVf-9f-E7f" secondAttribute="bottom" constant="8" id="sgr-fM-te2"/>
+                            <constraint firstAttribute="trailing" secondItem="yk2-cx-LvJ" secondAttribute="trailing" id="syw-rC-uge"/>
+                            <constraint firstItem="yk2-cx-LvJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w0C-Dg-0mh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
